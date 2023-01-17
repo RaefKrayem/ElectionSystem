@@ -1,0 +1,302 @@
+:root {
+    --LoginPageColor: #ffc107;
+    --HomeBg: #dcdcdc;
+    --VotedDiv: #017bff;
+    --VotersDiv: #17a3b8;
+    --MenuElementBg: #216dbc;
+    --TextColor: #4e4e4d;
+    --NavBg: #343a40;
+    --CandDiv: #f2f2f2;
+    --fontFamily: 'Playfair Display';
+}
+
+html {
+    font-size: 16px;
+}
+
+
+/* main styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontFamily);
+}
+
+
+body {
+    background-color: var(--HomeBg);
+    color: var(--TextColor);
+    padding: 0;
+    
+}
+
+
+/* nav bar styles */
+.navBar {
+    padding: 0.4rem 2rem;
+    background-color: var(--NavBg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logoutDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    border-radius: 0.4rem;
+    transition: 0.1s;
+}
+
+.Button {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logoutDiv:hover {
+    background-color: white;
+    color: var(--NavBg);
+}
+
+.logoutDiv img {
+    height: auto;
+    flex-basis: 13%;
+}
+
+.navBar img {
+    width: 4%;
+    border-radius:50%;
+}
+
+#logo {
+    width: 3.25rem;
+}
+
+
+
+
+/* content styles */
+
+.content {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 100%;
+    margin-top: 3px;
+}
+
+
+
+/* menu styles */
+.menu {
+    background-color: var(--NavBg);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 100%;
+    color: white;
+}
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.element {
+    background-color: var(--MenuElementBg);
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.element img {
+    width: 10%;
+}
+
+
+.element:hover {
+    background-color: var(--VotedDiv);
+    color: var(--TextColor);
+}
+
+.element a:link, .element a:visited, .element a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* main styles */
+.main {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 100%;
+    padding: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* main head styles */
+.mainHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1rem;
+    gap: 2%;
+}
+
+.voters {
+    background-color: var(--VotersDiv);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+.voters h1 {
+    padding-bottom: 0.7rem;
+}
+
+.votersBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 7rem;
+    padding-top: 1rem;
+}
+
+.votersBody img {
+    width: 30%;
+}
+
+#voted {
+    background-color: var(--VotedDiv);
+}
+
+.votedImg {
+    padding-right: 3.7rem;
+}
+
+
+/* main body styles */
+.mainBody {
+    background-color: white;
+    color: var(--NavBg);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+.mainBody h1:nth-child(1) {
+    padding-bottom: 1rem;
+}
+
+.mainBody hr {
+    background-color: var(--TextColor);
+    border: 0;
+    height: 1px;
+}
+
+.headers {
+    padding: 1.5rem 0;
+}
+
+
+/* presCandidates, viceCandidates styles */
+.presCandidates, .viceCandidates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.presCandidates {
+    padding-bottom: 1rem;
+}
+
+
+.candContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--CandDiv);
+    border-radius: 2rem 0 1rem 2rem;
+    width: 18.1rem;
+}
+
+.candProfile {
+    width: 3rem;
+    border: 5px solid var(--CandDiv);
+    border-radius: 50%;
+}
+
+.cand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    border-radius: 0 10% 10% 0;
+}
+
+
+/* vote button styles */
+.voteContainer {
+    padding-top: 1.5rem;
+}
+
+.vote {
+    padding: 0.5rem 2rem;
+    border: 0;
+    font-size: 1em;
+    background-color: var(--VotedDiv);
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.vote:hover {
+    background-color: var(--VotersDiv);
+}
+
+.voted {
+    padding: 0.5rem 2rem;
+    border: 0;
+    font-size: 1em;
+    background-color: var(--VotersDiv);
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.vote:hover {
+    background-color: var(--VotersDiv);
+}
+
+
+
+/* voted users styles */
+.votedd {
+    background-color: var(--VotersDiv);
+    color: white;
+    padding: 0.5rem 2rem;
+    border: 0;
+    font-size: 1em;
+    border-radius: 1rem;
+}
+
+

@@ -1,0 +1,98 @@
+
+:root {
+    --HomeBg: #dcdcdc;
+    --LoginHover: #017bff;
+    --Container: #17a3b8;
+    --fontFamily: 'Playfair Display';
+}
+
+
+html {
+    font-size: 16px;
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    font-family: var(--fontFamily);
+    color:white;
+}
+
+body {
+    margin: auto;
+    background-color: var(--HomeBg);
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    width: 11rem;
+    border-radius: 50%;
+}
+
+
+/* form styles */
+.loginContainer {
+    background-color: var(--Container);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.3em;
+    width: 23%;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#email, #password {
+    border: 1px solid transparent;
+    padding: 0.2rem;
+    border-radius: 5px;
+    transition: 0.1s;
+    font-size: 0.7em;
+    color: black;
+}
+
+#email:focus, #password:focus {
+    border: 1px solid var(--LoginHover);
+}
+
+
+/* login button styles */
+
+
+#loginButton {
+    width: 100%;
+    background-color: #2878cd;
+    padding: 0.2rem;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    font-size: 0.8em;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+#loginButton:hover {
+    background-color: var(--LoginHover);
+}
+
+
+/* signup styles */
+.signupContainer {
+    background-color: var(--Container);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.signupContainer a {
+    color: blue;
+}
+
